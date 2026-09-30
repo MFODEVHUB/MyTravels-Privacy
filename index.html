@@ -51,7 +51,7 @@
 
 <header>
   <h1>Politique de confidentialité</h1>
-  <p>Application MyTravels &mdash; dernière mise à jour : 22 mai 2026</p>
+  <p>Application MyTravels &mdash; dernière mise à jour : 30 septembre 2026</p>
 </header>
 
 <main>
@@ -71,7 +71,8 @@
     <p>
       MyTravels enregistre vos données de voyage <strong>exclusivement sur votre appareil</strong>,
       dans une base de données locale (Room/SQLite). Ces données ne sont jamais transmises à nos
-      serveurs ni à des tiers. Elles comprennent :
+      serveurs ni à des tiers, à l'exception des envois volontaires décrits à la section 5. Elles
+      comprennent :
     </p>
     <ul>
       <li>Le statut de chaque pays (Visité / À visiter / Non visité)</li>
@@ -121,12 +122,57 @@
       <li>Des données de navigation web</li>
     </ul>
     <p>L'application ne dispose d'aucun compte utilisateur et ne nécessite aucune inscription.</p>
+    <p>
+      Le formulaire de retour (section 5) comporte un champ de texte libre : nous vous invitons à
+      ne pas y saisir d'informations personnelles.
+    </p>
   </section>
 
   <section>
-    <h2>5. Autorisations Android utilisées</h2>
+    <h2>5. Rapports de plantage et retours (envoi volontaire)</h2>
+    <p>
+      Deux fonctions de l'application peuvent envoyer des informations à un service de stockage de
+      données que nous exploitons (base de données hébergée par Supabase, sur des serveurs situés
+      dans l'Union européenne), <strong>uniquement
+      lorsque vous en faites la demande explicite</strong> :
+    </p>
     <ul>
-      <li><strong>INTERNET</strong> — nécessaire pour le chargement des publicités AdMob</li>
+      <li><strong>Rapport de plantage</strong> : si l'application s'est arrêtée de manière inattendue,
+          elle peut vous proposer, au lancement suivant, d'envoyer un rapport technique. Il contient
+          la trace technique de l'erreur, la version de l'application, la version d'Android, le
+          modèle de l'appareil et la langue du système.</li>
+      <li><strong>Retour utilisateur</strong> : si vous utilisez le formulaire de retour, sont
+          envoyés le message que vous rédigez, ainsi que la version de l'application, la version
+          d'Android, le modèle de l'appareil, la langue, le nombre de pays marqués comme visités et
+          le thème choisi.</li>
+    </ul>
+    <p>
+      Ces envois ne sont jamais automatiques : vous pouvez les refuser ou choisir de ne plus
+      recevoir la proposition. Ils ne contiennent aucune information permettant de vous identifier
+      directement (ni nom, ni adresse e-mail, ni identifiant publicitaire, ni localisation). Ils sont
+      utilisés uniquement pour corriger des défauts de l'application et l'améliorer, et sont
+      transmis exclusivement via HTTPS.
+    </p>
+    <p>
+      <strong>Conservation :</strong> ces données sont conservées 12 mois, puis supprimées. Vous
+      pouvez demander leur suppression avant cette échéance en écrivant à
+      <a href="mailto:mfodevhub@gmail.com">mfodevhub@gmail.com</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>6. Achats et dons</h2>
+    <p>
+      Les dons et abonnements de soutien sont traités par Google Play. Nous ne recevons ni vos
+      moyens de paiement ni vos données bancaires, seulement la confirmation de l'achat.
+    </p>
+  </section>
+
+  <section>
+    <h2>7. Autorisations Android utilisées</h2>
+    <ul>
+      <li><strong>INTERNET</strong> — nécessaire au chargement des publicités AdMob, aux achats et dons via
+          Google Play, et à l'envoi volontaire de rapports ou de retours (section 5)</li>
       <li><strong>ACCESS_NETWORK_STATE</strong> — permet à AdMob de vérifier la connectivité avant
           de charger une annonce</li>
     </ul>
@@ -134,25 +180,25 @@
   </section>
 
   <section>
-    <h2>6. Sécurité des communications</h2>
+    <h2>8. Sécurité des communications</h2>
     <p>
-      Toutes les communications réseau de l'application (AdMob, consentement RGPD) s'effectuent
-      exclusivement via <strong>HTTPS</strong>. Le trafic HTTP non chiffré est explicitement interdit
+      Toutes les communications réseau de l'application (AdMob, consentement RGPD, Google Play,
+      envois volontaires de la section 5) s'effectuent exclusivement via <strong>HTTPS</strong>. Le trafic HTTP non chiffré est explicitement interdit
       par la configuration de sécurité réseau de l'application.
     </p>
   </section>
 
   <section>
-    <h2>7. Partage des données avec des tiers</h2>
+    <h2>9. Partage des données avec des tiers</h2>
     <p>
       Nous ne vendons, ne louons et ne partageons vos données personnelles avec aucun tiers, à
-      l'exception des données publicitaires transmises à Google AdMob dans les conditions décrites
-      à la section 3.
+      l'exception des données publicitaires transmises à Google AdMob (section 3) et de
+      l'hébergement des envois volontaires décrits à la section 5.
     </p>
   </section>
 
   <section>
-    <h2>8. Vos droits (RGPD)</h2>
+    <h2>10. Vos droits (RGPD)</h2>
     <p>
       Si vous êtes résident de l'Espace économique européen, vous disposez des droits suivants
       concernant vos données personnelles traitées par Google AdMob :
@@ -167,22 +213,24 @@
       Pour exercer ces droits concernant les données Google, rendez-vous sur
       <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">
       myaccount.google.com/data-and-privacy</a>.
-      Pour toute demande relative à l'application elle-même, contactez-nous à
+      Pour toute demande relative à l'application elle-même, y compris l'accès ou la suppression
+      des données envoyées volontairement (section 5), contactez-nous à
       <a href="mailto:mfodevhub@gmail.com">mfodevhub@gmail.com</a>.
     </p>
   </section>
 
   <section>
-    <h2>9. Conservation des données</h2>
+    <h2>11. Conservation des données</h2>
     <p>
       Les données locales (statuts pays/villes, préférences) sont conservées sur votre appareil
       jusqu'à ce que vous les effaciez manuellement (via <strong>Paramètres → Effacer les
-      données</strong>) ou que vous désinstalliez l'application.
+      données</strong>) ou que vous désinstalliez l'application. Les données envoyées
+      volontairement (section 5) sont conservées 12 mois.
     </p>
   </section>
 
   <section>
-    <h2>10. Enfants</h2>
+    <h2>12. Enfants</h2>
     <p>
       MyTravels n'est pas destinée aux enfants de moins de 13 ans. Nous ne collectons pas
       sciemment de données personnelles concernant des mineurs.
@@ -190,7 +238,7 @@
   </section>
 
   <section>
-    <h2>11. Modifications de cette politique</h2>
+    <h2>13. Modifications de cette politique</h2>
     <p>
       Nous nous réservons le droit de mettre à jour cette politique de confidentialité. En cas de
       modification substantielle, la date de « dernière mise à jour » en haut de cette page sera
@@ -199,7 +247,7 @@
   </section>
 
   <section>
-    <h2>12. Contact</h2>
+    <h2>14. Contact</h2>
     <p>
       Pour toute question relative à cette politique de confidentialité, vous pouvez nous contacter
       à l'adresse suivante : <a href="mailto:mfodevhub@gmail.com">mfodevhub@gmail.com</a>
