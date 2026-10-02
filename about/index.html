@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyTravels — Suivez les pays que vous avez visités / Track the countries you have visited</title>
+  <meta name="description" content="MyTravels : marquez sur une carte du monde les pays, régions et villes que vous avez visités ou souhaitez visiter. Application Android et version web gratuite, sans compte. / Mark the countries, regions and cities you have visited or want to visit on a world map. Android app and free web version, no account." />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f8f9fa;
+      color: #212529;
+      line-height: 1.7;
+    }
+    header {
+      background: #3f51b5;
+      color: #fff;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+    header img { width: 84px; height: 84px; border-radius: 18px; background: #fff; }
+    header h1 { font-size: 2rem; font-weight: 700; margin-top: .8rem; }
+    header p  { margin-top: .4rem; opacity: .9; font-size: 1.05rem; }
+    .cta-row { display: flex; flex-wrap: wrap; justify-content: center; gap: .7rem; margin-top: 1.4rem; }
+    .cta {
+      display: inline-block;
+      font-weight: 700;
+      font-size: .95rem;
+      padding: .65rem 1.3rem;
+      border-radius: 999px;
+      text-decoration: none;
+      background: #fff;
+      color: #3f51b5;
+    }
+    .cta.soon {
+      background: transparent;
+      color: #fff;
+      border: 1px dashed rgba(255, 255, 255, .7);
+    }
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: .5rem;
+      margin-top: 1.4rem;
+    }
+    .lang-switch a, .lang-switch span {
+      font-weight: 600;
+      font-size: .85rem;
+      padding: .4rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, .6);
+      text-decoration: none;
+      color: #fff;
+    }
+    .lang-switch span.current {
+      background: #fff;
+      color: #3f51b5;
+      border-color: #fff;
+    }
+    main {
+      max-width: 760px;
+      margin: 2.5rem auto;
+      padding: 0 1.25rem 3rem;
+    }
+    section { margin-bottom: 2.2rem; }
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #3f51b5;
+      margin-bottom: .6rem;
+      padding-bottom: .3rem;
+      border-bottom: 2px solid #e8eaf6;
+    }
+    h3 { font-size: 1rem; margin: 1rem 0 .3rem; }
+    p  { margin-bottom: .8rem; }
+    ul { margin: .4rem 0 .8rem 1.4rem; }
+    li { margin-bottom: .3rem; }
+    a  { color: #3f51b5; }
+    code { background: #e8eaf6; padding: .1rem .35rem; border-radius: 4px; font-size: .9em; }
+    footer {
+      text-align: center;
+      font-size: .85rem;
+      color: #868e96;
+      padding: 1.5rem;
+      border-top: 1px solid #dee2e6;
+    }
+    footer a { color: #5c6bc0; margin: 0 .4rem; }
+
+    /* Bascule de langue 100% CSS (aucun JavaScript) : chaque langue est un bloc ciblé
+       par ancre d'URL (#en). Par défaut (aucune ancre), le français s'affiche. */
+    #en { display: none; }
+    #en:target { display: block; }
+    #en:target ~ #fr { display: none; }
+  </style>
+</head>
+<body>
+
+<div id="en">
+  <header>
+    <img src="logo.png" alt="MyTravels logo" width="84" height="84" />
+    <h1>MyTravels</h1>
+    <p>Track the countries, regions and cities you have visited.</p>
+    <div class="cta-row">
+      <a class="cta" href="https://mfodevhub.github.io/MyTravels-web/">Open the web version</a>
+      <span class="cta soon">Android app: coming soon on Google Play</span>
+    </div>
+    <div class="lang-switch">
+      <a href="#fr">Français</a>
+      <span class="current">English</span>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>What is MyTravels for?</h2>
+      <p>
+        MyTravels is a travel-tracking app. You mark on a world map the <strong>countries</strong> (and
+        some <strong>regions</strong> and <strong>cities</strong>) you have visited or want to visit, so
+        you keep a record of your trips and can share your journey. It is free, needs no account and
+        has no ads on the web version.
+      </p>
+    </section>
+
+    <section>
+      <h2>Two ways to use it</h2>
+      <h3>Android app</h3>
+      <p>
+        The full experience: interactive world map, countries, regions and cities, visit dates, badges
+        and challenges, statistics, travel history and shareable images of your map.
+        It will be available on Google Play.
+      </p>
+      <h3>Web version</h3>
+      <p>
+        Works in any browser, with nothing to install (it can also be added to your home screen and works
+        offline):
+      </p>
+      <ul>
+        <li>Interactive world map with country names</li>
+        <li>Visited / Want to visit / Not visited statuses, with visit date</li>
+        <li>Regions view: 50 US states, 14 Greek regions and 16 Moroccan regions</li>
+        <li>Backup import and export, compatible with the Android app</li>
+        <li>French and English, light and dark themes</li>
+      </ul>
+      <p><a href="https://mfodevhub.github.io/MyTravels-web/">Open the web version →</a></p>
+    </section>
+
+    <section>
+      <h2>Your data stays with you</h2>
+      <p>
+        Your travel data is stored on your device (or in your browser for the web version). MyTravels has
+        no accounts and sends nothing to a server of its own. You can export a backup file at any time.
+      </p>
+    </section>
+
+    <section>
+      <h2>Optional sync with Google Drive</h2>
+      <p>
+        To find your countries on all your devices, the web version offers an <strong>optional</strong>
+        synchronization using your Google account. It is off unless you turn it on.
+      </p>
+      <ul>
+        <li><strong>Why Google Drive access?</strong> To store a single small backup file (statuses and
+            visit dates of your countries and regions) so that your devices can share it.</li>
+        <li><strong>What is requested:</strong> only the permission to use a <strong>private, hidden folder
+            reserved for MyTravels</strong> in your Drive (<code>drive.appdata</code>). The app cannot see,
+            read or modify any of your other files, and it does not access your name, email address or
+            profile.</li>
+        <li><strong>What we receive:</strong> nothing. Data goes directly between your browser and your
+            Drive; we run no server for this.</li>
+        <li><strong>Your control:</strong> you can sign out, delete the backup from the app, or revoke
+            access at any time from
+            <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">your Google account</a>.</li>
+      </ul>
+      <p>
+        MyTravels' use of information received from Google APIs adheres to the
+        <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API
+        Services User Data Policy</a>, including the Limited Use requirements.
+      </p>
+    </section>
+
+    <section>
+      <h2>Privacy and contact</h2>
+      <p>
+        Read the full <a href="https://mfodevhub.github.io/MyTravels-Privacy/#en">privacy policy</a>.
+        A question or a bug? Write to <a href="mailto:mfodevhub@gmail.com">mfodevhub@gmail.com</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 MyTravels &mdash;
+    <a href="https://mfodevhub.github.io/MyTravels-Privacy/#en">Privacy policy</a>
+    <a href="https://mfodevhub.github.io/MyTravels-web/">Web version</a>
+    <a href="mailto:mfodevhub@gmail.com">Contact</a>
+  </footer>
+</div>
+
+<div id="fr">
+  <header>
+    <img src="logo.png" alt="Logo MyTravels" width="84" height="84" />
+    <h1>MyTravels</h1>
+    <p>Suivez les pays, régions et villes que vous avez visités.</p>
+    <div class="cta-row">
+      <a class="cta" href="https://mfodevhub.github.io/MyTravels-web/">Ouvrir la version web</a>
+      <span class="cta soon">Application Android : bientôt sur Google Play</span>
+    </div>
+    <div class="lang-switch">
+      <span class="current">Français</span>
+      <a href="#en">English</a>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>À quoi sert MyTravels ?</h2>
+      <p>
+        MyTravels est une application de suivi de voyages. Vous marquez sur une carte du monde les
+        <strong>pays</strong> (et certaines <strong>régions</strong> et <strong>villes</strong>) que vous
+        avez visités ou que vous souhaitez visiter, pour garder une trace de vos voyages et partager votre
+        parcours. Elle est gratuite, ne demande aucun compte et ne contient aucune publicité dans sa
+        version web.
+      </p>
+    </section>
+
+    <section>
+      <h2>Deux façons de l'utiliser</h2>
+      <h3>Application Android</h3>
+      <p>
+        L'expérience complète : carte du monde interactive, pays, régions et villes, dates de visite,
+        badges et défis, statistiques, historique de voyages et images partageables de votre carte.
+        Elle sera disponible sur Google Play.
+      </p>
+      <h3>Version web</h3>
+      <p>
+        Fonctionne dans n'importe quel navigateur, sans rien installer (elle peut aussi être ajoutée à
+        l'écran d'accueil et fonctionne hors ligne) :
+      </p>
+      <ul>
+        <li>Carte du monde interactive avec les noms des pays</li>
+        <li>Statuts Visité / À visiter / Non visité, avec date de visite</li>
+        <li>Vue Régions : 50 États américains, 14 régions grecques et 16 régions marocaines</li>
+        <li>Import et export de sauvegarde, compatibles avec l'application Android</li>
+        <li>Français et anglais, thèmes clair et sombre</li>
+      </ul>
+      <p><a href="https://mfodevhub.github.io/MyTravels-web/">Ouvrir la version web →</a></p>
+    </section>
+
+    <section>
+      <h2>Vos données restent chez vous</h2>
+      <p>
+        Vos données de voyage sont stockées sur votre appareil (ou dans votre navigateur pour la version
+        web). MyTravels n'a pas de comptes et n'envoie rien vers un serveur qui lui soit propre. Vous
+        pouvez exporter une sauvegarde à tout moment.
+      </p>
+    </section>
+
+    <section>
+      <h2>Synchronisation facultative avec Google Drive</h2>
+      <p>
+        Pour retrouver vos pays sur tous vos appareils, la version web propose une synchronisation
+        <strong>facultative</strong> via votre compte Google. Elle est désactivée tant que vous ne
+        l'activez pas.
+      </p>
+      <ul>
+        <li><strong>Pourquoi accéder à Google Drive ?</strong> Pour y stocker un unique petit fichier de
+            sauvegarde (statuts et dates de visite de vos pays et régions) que vos appareils se partagent.</li>
+        <li><strong>Ce qui est demandé :</strong> uniquement l'autorisation d'utiliser un <strong>dossier privé et
+            masqué réservé à MyTravels</strong> dans votre Drive (<code>drive.appdata</code>). L'application ne
+            peut ni voir, ni lire, ni modifier aucun autre de vos fichiers, et n'accède ni à votre nom, ni à
+            votre adresse e-mail, ni à votre profil.</li>
+        <li><strong>Ce que nous recevons :</strong> rien. Les données circulent directement entre votre
+            navigateur et votre Drive ; nous n'exploitons aucun serveur pour cela.</li>
+        <li><strong>Votre contrôle :</strong> vous pouvez vous déconnecter, supprimer la sauvegarde depuis
+            l'application, ou retirer l'accès à tout moment depuis
+            <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">votre compte Google</a>.</li>
+      </ul>
+      <p>
+        L'utilisation par MyTravels des informations reçues des API Google respecte la
+        <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">politique
+        relative aux données utilisateur des services d'API Google</a>, y compris ses exigences d'usage limité.
+      </p>
+    </section>
+
+    <section>
+      <h2>Confidentialité et contact</h2>
+      <p>
+        Consultez la <a href="https://mfodevhub.github.io/MyTravels-Privacy/">politique de confidentialité</a>
+        complète. Une question ou un bug ? Écrivez à
+        <a href="mailto:mfodevhub@gmail.com">mfodevhub@gmail.com</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 MyTravels &mdash;
+    <a href="https://mfodevhub.github.io/MyTravels-Privacy/">Politique de confidentialité</a>
+    <a href="https://mfodevhub.github.io/MyTravels-web/">Version web</a>
+    <a href="mailto:mfodevhub@gmail.com">Contact</a>
+  </footer>
+</div>
+
+</body>
+</html>
