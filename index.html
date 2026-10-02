@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Politique de confidentialité — MyTravels</title>
+  <title>Politique de confidentialité — MyTravels / Privacy Policy — MyTravels</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -15,7 +15,7 @@
     header {
       background: #3f51b5;
       color: #fff;
-      padding: 2.5rem 1.5rem 2rem;
+      padding: 2.5rem 1.5rem 1.5rem;
       text-align: center;
     }
     header h1 { font-size: 1.8rem; font-weight: 700; }
@@ -34,6 +34,7 @@
       padding-bottom: .3rem;
       border-bottom: 2px solid #e8eaf6;
     }
+    h3 { font-size: 1rem; margin: 1rem 0 .4rem; }
     p  { margin-bottom: .8rem; }
     ul { margin: .4rem 0 .8rem 1.4rem; }
     li { margin-bottom: .3rem; }
@@ -45,220 +46,722 @@
       padding: 1.5rem;
       border-top: 1px solid #dee2e6;
     }
+
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: .5rem;
+      margin-top: 1.2rem;
+    }
+    .lang-switch a, .lang-switch span {
+      font-weight: 600;
+      font-size: .85rem;
+      padding: .4rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, .6);
+      text-decoration: none;
+      color: #fff;
+    }
+    .lang-switch span.current {
+      background: #fff;
+      color: #3f51b5;
+      border-color: #fff;
+    }
+
+    /* Bascule de langue 100% CSS (aucun JavaScript) : chaque langue est un bloc ciblé
+       par ancre d'URL (#en). Par défaut (aucune ancre), le français s'affiche. Robuste
+       partout, y compris dans les WebView/navigateurs embarqués qui désactivent le JS. */
+    #en { display: none; }
+    #en:target { display: block; }
+    #en:target ~ #fr { display: none; }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Politique de confidentialité</h1>
-  <p>Application MyTravels &mdash; dernière mise à jour : 30 septembre 2026</p>
-</header>
+<div id="en">
+  <header>
+    <h1>Privacy Policy</h1>
+    <p>MyTravels (Android app and web version) &mdash; last updated: 2 October 2026</p>
+      <div class="lang-switch">
+        <a href="#fr">Français</a>
+        <span class="current">English</span>
+      </div>
+    </header>
 
-<main>
+  <main>
 
-  <section>
-    <h2>1. Présentation</h2>
-    <p>
-      MyTravels est une application Android de suivi de voyages éditée par un développeur indépendant
-      (ci-après « nous » ou « l'éditeur »). La présente politique de confidentialité décrit quelles
-      données sont collectées, comment elles sont utilisées et quels droits vous disposez à leur égard.
-    </p>
-    <p>Contact : <a href="mailto:mfodevhub@gmail.com">mfodevhub@gmail.com</a></p>
-  </section>
+    <section>
+      <h2>1. Introduction</h2>
+      <p>
+        MyTravels is a travel-tracking service published by an independent developer (hereinafter "we"
+        or "the publisher"). It is available in two forms: an <strong>Android app</strong> and a
+        <strong>web version</strong>, which runs in a browser at
+        <a href="https://mfodevhub.github.io/MyTravels-web/">mfodevhub.github.io/MyTravels-web</a>.
+        This privacy policy describes what data is collected, how it is used and what rights you have
+        regarding it. When a section applies to only one of the two forms, it says so.
+      </p>
+      <p>Contact: <a href="mailto:mfodevhub@gmail.com">mfodevhub@gmail.com</a></p>
+    </section>
 
-  <section>
-    <h2>2. Données stockées localement sur votre appareil</h2>
-    <p>
-      MyTravels enregistre vos données de voyage <strong>exclusivement sur votre appareil</strong>,
-      dans une base de données locale (Room/SQLite). Ces données ne sont jamais transmises à nos
-      serveurs ni à des tiers, à l'exception des envois volontaires décrits à la section 5. Elles
-      comprennent :
-    </p>
-    <ul>
-      <li>Le statut de chaque pays (Visité / À visiter / Non visité)</li>
-      <li>Le statut de chaque ville (Visité / À visiter)</li>
-      <li>Vos préférences d'affichage (thème de carte, icône de l'application, etc.)</li>
-      <li>Les badges et défis débloqués</li>
-    </ul>
-    <p>
-      La fonction <strong>export / import de sauvegarde</strong> vous permet d'exporter ces données
-      sous forme de fichier JSON vers l'emplacement de votre choix (stockage interne, cloud personnel).
-      Ce fichier reste sous votre seul contrôle.
-    </p>
-  </section>
+    <section>
+      <h2>2. Data stored on your device or in your browser</h2>
+      <h3>Android app</h3>
+      <p>
+        MyTravels stores your travel data <strong>exclusively on your device</strong>, in a local
+        database (Room/SQLite). This data is never sent to our servers or to third parties, except for
+        the voluntary submissions described in section 6. It includes:
+      </p>
+      <ul>
+        <li>The status of each country (Visited / Want to visit / Not visited)</li>
+        <li>The status of each city (Visited / Want to visit)</li>
+        <li>Your display preferences (map theme, app icon, etc.)</li>
+        <li>Unlocked badges and challenges</li>
+      </ul>
+      <h3>Web version</h3>
+      <p>
+        The web version stores your travel data <strong>exclusively in your browser</strong> (the
+        browser's local storage: IndexedDB and localStorage). It is never sent to our servers, and is
+        sent to a third party only if you turn on the sync described in section 4. It includes:
+      </p>
+      <ul>
+        <li>The status of each country and region (Visited / Want to visit / Not visited) and, where
+            applicable, the visit date</li>
+        <li>The cities found in a backup you imported</li>
+        <li>Your preferences (language, theme) and small technical flags (for example the sync state or
+            the dismissal of an information card)</li>
+      </ul>
+      <p>
+        To work offline, the web version also keeps a copy of its files in the browser cache (service
+        worker). It sets no tracking cookies.
+      </p>
+      <h3>Backup file</h3>
+      <p>
+        The <strong>backup export / import</strong> feature (Android and web) lets you export this data
+        as a JSON file to a location of your choice (internal storage, personal cloud). That file
+        remains solely under your control.
+      </p>
+    </section>
 
-  <section>
-    <h2>3. Publicité — Google AdMob</h2>
-    <p>
-      L'application intègre le SDK Google AdMob afin d'afficher des publicités. AdMob peut collecter
-      et utiliser les données suivantes conformément à la
-      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique de
-      confidentialité de Google</a> :
-    </p>
-    <ul>
-      <li>Identifiant publicitaire Android (AAID)</li>
-      <li>Adresse IP (pour la localisation approximative)</li>
-      <li>Informations sur l'appareil (modèle, version Android, langue)</li>
-      <li>Données d'interaction avec les publicités (clics, impressions)</li>
-    </ul>
-    <p>
-      Conformément au Règlement général sur la protection des données (RGPD), un bandeau de
-      consentement vous est présenté au premier lancement. Vous pouvez modifier votre choix à tout
-      moment depuis les <strong>Paramètres → Publicités</strong> de l'application.
-    </p>
-    <p>
-      Si vous désactivez les publicités depuis les Paramètres, aucune donnée publicitaire n'est
-      collectée et aucune annonce n'est affichée.
-    </p>
-  </section>
+    <section>
+      <h2>3. Advertising — Google AdMob (Android app only)</h2>
+      <p>
+        The Android app includes the Google AdMob SDK to display ads. AdMob may collect and use the
+        following data in accordance with
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy
+        policy</a>:
+      </p>
+      <ul>
+        <li>Android advertising ID (AAID)</li>
+        <li>IP address (for approximate location)</li>
+        <li>Device information (model, Android version, language)</li>
+        <li>Ad interaction data (clicks, impressions)</li>
+      </ul>
+      <p>
+        In line with the General Data Protection Regulation (GDPR), a consent banner is shown at first
+        launch. You can change your choice at any time from the app's <strong>Settings →
+        Ads</strong>.
+      </p>
+      <p>
+        If you turn ads off in Settings, no advertising data is collected and no ads are shown.
+      </p>
+      <p>
+        <strong>The web version contains no ads</strong>, no audience-measurement tool and no tracker.
+      </p>
+    </section>
 
-  <section>
-    <h2>4. Données non collectées</h2>
-    <p>MyTravels <strong>ne collecte pas</strong> :</p>
-    <ul>
-      <li>Votre nom, adresse e-mail ou toute information d'identification personnelle</li>
-      <li>Votre localisation GPS</li>
-      <li>Des photos ou fichiers médias</li>
-      <li>Des données de navigation web</li>
-    </ul>
-    <p>L'application ne dispose d'aucun compte utilisateur et ne nécessite aucune inscription.</p>
-    <p>
-      Le formulaire de retour (section 5) comporte un champ de texte libre : nous vous invitons à
-      ne pas y saisir d'informations personnelles.
-    </p>
-  </section>
+    <section>
+      <h2>4. Google Drive sync (web version, optional)</h2>
+      <p>
+        The web version can, <strong>if you turn it on</strong>, sync your data between your devices
+        using your Google account. This feature is off by default: unless you act, no connection to
+        Google is made.
+      </p>
+      <h3>What sync does</h3>
+      <ul>
+        <li>You sign in with Google through Google's authentication service (Google Identity Services).
+            The corresponding script is loaded from Google's servers only when you sign in, or if sync is
+            already turned on.</li>
+        <li>The app requests a <strong>single permission</strong>:
+            <code>https://www.googleapis.com/auth/drive.appdata</code>, i.e. access to a
+            <strong>private, hidden folder reserved for MyTravels</strong> in your Google Drive. It
+            <strong>cannot see, read or modify any other file</strong> in your Drive, and it does not
+            access your name, your email address or your profile.</li>
+        <li>In that folder it creates one file (<code>mytravels-sync.json</code>) containing the same
+            information as the backup file: statuses and visit dates of countries and regions, and the
+            cities from an imported backup.</li>
+      </ul>
+      <h3>What we receive</h3>
+      <p>
+        <strong>Nothing.</strong> Exchanges take place directly between your browser and Google Drive: we
+        run no server for this feature and have no access to your Google account, to the content of your
+        Drive or to your travel data. This data stays under the control of your Google account and is
+        subject to
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy
+        policy</a>.
+      </p>
+      <h3>Access token</h3>
+      <p>
+        After you sign in, Google gives your browser a temporary access token (valid for about one hour).
+        It is kept in your browser's local storage until it expires or until you sign out, and is then
+        discarded. After that, the app asks you to sign in again.
+      </p>
+      <h3>Your choices</h3>
+      <ul>
+        <li><strong>Sign out</strong> (Settings → Sync) stops syncing and discards the token; your data
+            stays in your browser and in your Drive.</li>
+        <li><strong>Delete my cloud backup</strong> deletes the file from your Drive and stops syncing;
+            your local data is kept.</li>
+        <li>You can withdraw MyTravels' access at any time from your Google account:
+            <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>.
+            The app's hidden folder can also be deleted there.</li>
+      </ul>
+      <h3>Compliance with Google's policies</h3>
+      <p>
+        MyTravels' use and transfer of information received from Google APIs adheres to the
+        <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google
+        API Services User Data Policy</a>, including the Limited Use requirements. This information is
+        used only to provide the sync described here: it is not used for advertising, not sold, not
+        transferred to third parties and not read by humans, except where required by law.
+      </p>
+      <p>
+        As of today, this sync concerns the web version; the Android app does not use Google Drive.
+      </p>
+    </section>
 
-  <section>
-    <h2>5. Rapports de plantage et retours (envoi volontaire)</h2>
-    <p>
-      Deux fonctions de l'application peuvent envoyer des informations à un service de stockage de
-      données que nous exploitons (base de données hébergée par Supabase, sur des serveurs situés
-      dans l'Union européenne), <strong>uniquement
-      lorsque vous en faites la demande explicite</strong> :
-    </p>
-    <ul>
-      <li><strong>Rapport de plantage</strong> : si l'application s'est arrêtée de manière inattendue,
-          elle peut vous proposer, au lancement suivant, d'envoyer un rapport technique. Il contient
-          la trace technique de l'erreur, la version de l'application, la version d'Android, le
-          modèle de l'appareil et la langue du système.</li>
-      <li><strong>Retour utilisateur</strong> : si vous utilisez le formulaire de retour, sont
-          envoyés le message que vous rédigez, ainsi que la version de l'application, la version
-          d'Android, le modèle de l'appareil, la langue, le nombre de pays marqués comme visités et
-          le thème choisi.</li>
-    </ul>
-    <p>
-      Ces envois ne sont jamais automatiques : vous pouvez les refuser ou choisir de ne plus
-      recevoir la proposition. Ils ne contiennent aucune information permettant de vous identifier
-      directement (ni nom, ni adresse e-mail, ni identifiant publicitaire, ni localisation). Ils sont
-      utilisés uniquement pour corriger des défauts de l'application et l'améliorer, et sont
-      transmis exclusivement via HTTPS.
-    </p>
-    <p>
-      <strong>Conservation :</strong> ces données sont conservées 12 mois, puis supprimées. Vous
-      pouvez demander leur suppression avant cette échéance en écrivant à
-      <a href="mailto:mfodevhub@gmail.com">mfodevhub@gmail.com</a>.
-    </p>
-  </section>
+    <section>
+      <h2>5. Data not collected</h2>
+      <p>MyTravels <strong>does not collect</strong>:</p>
+      <ul>
+        <li>Your name, email address or any personally identifying information</li>
+        <li>Your GPS location</li>
+        <li>Photos or media files</li>
+        <li>Web browsing data</li>
+      </ul>
+      <p>
+        MyTravels has no user account of its own and requires no registration. The optional sync in the
+        web version relies on your existing Google account, without us receiving your identity
+        (section 4).
+      </p>
+      <p>
+        The Android app's feedback form (section 6) includes a free-text field: please do not enter
+        personal information in it.
+      </p>
+    </section>
 
-  <section>
-    <h2>6. Achats et dons</h2>
-    <p>
-      Les dons et abonnements de soutien sont traités par Google Play. Nous ne recevons ni vos
-      moyens de paiement ni vos données bancaires, seulement la confirmation de l'achat.
-    </p>
-  </section>
+    <section>
+      <h2>6. Crash reports and feedback (Android app, voluntary submission)</h2>
+      <p>
+        Two features of the Android app can send information to a data storage service that we operate
+        (a database hosted by Supabase, on servers located in the European Union),
+        <strong>only when you explicitly ask for it</strong>:
+      </p>
+      <ul>
+        <li><strong>Crash report</strong>: if the app stopped unexpectedly, it may offer, at the next
+            launch, to send a technical report. It contains the technical trace of the error, the app
+            version, the Android version, the device model and the system language.</li>
+        <li><strong>User feedback</strong>: if you use the feedback form, what is sent is the message you
+            write, plus the app version, the Android version, the device model, the language, the number
+            of countries marked as visited and the chosen theme.</li>
+      </ul>
+      <p>
+        These submissions are never automatic: you can decline them or choose to stop receiving the
+        offer. They contain no information that directly identifies you (no name, no email address, no
+        advertising ID, no location). They are used only to fix and improve the app, and are sent
+        exclusively over HTTPS.
+      </p>
+      <p>
+        <strong>Retention:</strong> this data is kept for 12 months, then deleted. You can ask for it to
+        be deleted earlier by writing to
+        <a href="mailto:mfodevhub@gmail.com">mfodevhub@gmail.com</a>.
+      </p>
+      <p>
+        <strong>Web version:</strong> it sends no report or feedback automatically. The "A remark or a
+        bug?" link simply opens your email application: the message you choose to send reaches us by
+        email, with the information you write in it.
+      </p>
+    </section>
 
-  <section>
-    <h2>7. Autorisations Android utilisées</h2>
-    <ul>
-      <li><strong>INTERNET</strong> — nécessaire au chargement des publicités AdMob, aux achats et dons via
-          Google Play, et à l'envoi volontaire de rapports ou de retours (section 5)</li>
-      <li><strong>ACCESS_NETWORK_STATE</strong> — permet à AdMob de vérifier la connectivité avant
-          de charger une annonce</li>
-    </ul>
-    <p>Aucune autre permission système n'est demandée.</p>
-  </section>
+    <section>
+      <h2>7. Purchases and donations (Android app)</h2>
+      <p>
+        Donations and support subscriptions are processed by Google Play. We receive neither your
+        payment methods nor your banking details, only the confirmation of the purchase. The web version
+        offers no purchases.
+      </p>
+    </section>
 
-  <section>
-    <h2>8. Sécurité des communications</h2>
-    <p>
-      Toutes les communications réseau de l'application (AdMob, consentement RGPD, Google Play,
-      envois volontaires de la section 5) s'effectuent exclusivement via <strong>HTTPS</strong>. Le trafic HTTP non chiffré est explicitement interdit
-      par la configuration de sécurité réseau de l'application.
-    </p>
-  </section>
+    <section>
+      <h2>8. Permissions used</h2>
+      <h3>Android app</h3>
+      <ul>
+        <li><strong>INTERNET</strong> — needed to load AdMob ads, for purchases and donations through Google
+            Play, and for voluntarily sending reports or feedback (section 6)</li>
+        <li><strong>ACCESS_NETWORK_STATE</strong> — lets AdMob check connectivity before loading an
+            ad</li>
+      </ul>
+      <p>No other system permission is requested.</p>
+      <h3>Web version</h3>
+      <p>
+        The web version does not request geolocation, or access to the camera, microphone or contacts. It
+        may ask the browser to make its local storage persistent, so that your data is not cleared
+        automatically.
+      </p>
+    </section>
 
-  <section>
-    <h2>9. Partage des données avec des tiers</h2>
-    <p>
-      Nous ne vendons, ne louons et ne partageons vos données personnelles avec aucun tiers, à
-      l'exception des données publicitaires transmises à Google AdMob (section 3) et de
-      l'hébergement des envois volontaires décrits à la section 5.
-    </p>
-  </section>
+    <section>
+      <h2>9. Communication security</h2>
+      <p>
+        All network communications of the Android app (AdMob, GDPR consent, Google Play, voluntary
+        submissions in section 6) take place exclusively over <strong>HTTPS</strong>. Unencrypted HTTP
+        traffic is explicitly forbidden by the app's network security configuration. The web version is
+        served and communicates with Google exclusively over HTTPS.
+      </p>
+      <p>
+        The web version is hosted by <strong>GitHub Pages</strong>. Like any host, GitHub may process your
+        IP address and technical connection logs when you visit the site, in accordance with its
+        <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">privacy
+        statement</a>. We add no audience-measurement tool there.
+      </p>
+    </section>
 
-  <section>
-    <h2>10. Vos droits (RGPD)</h2>
-    <p>
-      Si vous êtes résident de l'Espace économique européen, vous disposez des droits suivants
-      concernant vos données personnelles traitées par Google AdMob :
-    </p>
-    <ul>
-      <li>Droit d'accès, de rectification et d'effacement</li>
-      <li>Droit d'opposition au traitement à des fins publicitaires</li>
-      <li>Droit à la portabilité des données</li>
-      <li>Droit de retirer votre consentement à tout moment</li>
-    </ul>
-    <p>
-      Pour exercer ces droits concernant les données Google, rendez-vous sur
-      <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">
-      myaccount.google.com/data-and-privacy</a>.
-      Pour toute demande relative à l'application elle-même, y compris l'accès ou la suppression
-      des données envoyées volontairement (section 5), contactez-nous à
-      <a href="mailto:mfodevhub@gmail.com">mfodevhub@gmail.com</a>.
-    </p>
-  </section>
+    <section>
+      <h2>10. Sharing data with third parties</h2>
+      <p>
+        We do not sell, rent or share your personal data with any third party, except:
+      </p>
+      <ul>
+        <li>advertising data sent to Google AdMob (section 3, Android app);</li>
+        <li>the hosting of the voluntary submissions described in section 6 (Android app);</li>
+        <li>Google, only if you turn on sync in the web version, to store your backup file in your own
+            Drive (section 4);</li>
+        <li>GitHub, which hosts the web version's site (section 9).</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>11. Conservation des données</h2>
-    <p>
-      Les données locales (statuts pays/villes, préférences) sont conservées sur votre appareil
-      jusqu'à ce que vous les effaciez manuellement (via <strong>Paramètres → Effacer les
-      données</strong>) ou que vous désinstalliez l'application. Les données envoyées
-      volontairement (section 5) sont conservées 12 mois.
-    </p>
-  </section>
+    <section>
+      <h2>11. Your rights (GDPR)</h2>
+      <p>
+        If you are a resident of the European Economic Area, you have the following rights regarding your
+        personal data:
+      </p>
+      <ul>
+        <li>Right of access, rectification and erasure</li>
+        <li>Right to object to processing for advertising purposes</li>
+        <li>Right to data portability</li>
+        <li>Right to withdraw your consent at any time</li>
+      </ul>
+      <p>
+        Since your travel data is stored on your device, in your browser or in your own Drive, you control
+        it directly: you can export it (backup file), edit it or erase it yourself from the app (Android:
+        <strong>Settings → Clear data</strong>; web: <strong>Settings → Erase all my data</strong>).
+      </p>
+      <p>
+        To exercise your rights regarding data processed by Google (AdMob, Google account, Drive), go to
+        <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">
+        myaccount.google.com/data-and-privacy</a>.
+        For any request concerning MyTravels itself, including access to or deletion of data sent
+        voluntarily (section 6), contact us at
+        <a href="mailto:mfodevhub@gmail.com">mfodevhub@gmail.com</a>.
+      </p>
+    </section>
 
-  <section>
-    <h2>12. Enfants</h2>
-    <p>
-      MyTravels n'est pas destinée aux enfants de moins de 13 ans. Nous ne collectons pas
-      sciemment de données personnelles concernant des mineurs.
-    </p>
-  </section>
+    <section>
+      <h2>12. Data retention</h2>
+      <ul>
+        <li><strong>Android app</strong>: local data (country/city statuses, preferences) is kept on your
+            device until you erase it manually (<strong>Settings → Clear data</strong>) or uninstall the
+            app.</li>
+        <li><strong>Web version</strong>: local data is kept in your browser until you erase it
+            (<strong>Settings → Erase all my data</strong>) or clear the site's data in your browser.</li>
+        <li><strong>Google Drive sync</strong>: the file is kept in your Drive until you delete it
+            (<strong>Delete my cloud backup</strong>, or from your Google account). The access token is
+            temporary (about one hour).</li>
+        <li><strong>Voluntary submissions</strong> (section 6, Android app): kept for 12 months.</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>13. Modifications de cette politique</h2>
-    <p>
-      Nous nous réservons le droit de mettre à jour cette politique de confidentialité. En cas de
-      modification substantielle, la date de « dernière mise à jour » en haut de cette page sera
-      actualisée. Nous vous encourageons à consulter cette page périodiquement.
-    </p>
-  </section>
+    <section>
+      <h2>13. Children</h2>
+      <p>
+        MyTravels is not intended for children under 13. We do not knowingly collect personal data about
+        minors.
+      </p>
+    </section>
 
-  <section>
-    <h2>14. Contact</h2>
-    <p>
-      Pour toute question relative à cette politique de confidentialité, vous pouvez nous contacter
-      à l'adresse suivante : <a href="mailto:mfodevhub@gmail.com">mfodevhub@gmail.com</a>
-    </p>
-  </section>
+    <section>
+      <h2>14. Changes to this policy</h2>
+      <p>
+        We reserve the right to update this privacy policy. In the event of a substantial change, the
+        "last updated" date at the top of this page will be refreshed. We encourage you to check this
+        page periodically.
+      </p>
+    </section>
 
-</main>
+    <section>
+      <h2>15. Contact</h2>
+      <p>
+        For any question about this privacy policy, you can contact us at:
+        <a href="mailto:mfodevhub@gmail.com">mfodevhub@gmail.com</a>
+      </p>
+    </section>
 
-<footer>
-  &copy; 2026 MyTravels &mdash; Tous droits réservés
-</footer>
+  </main>
+
+  <footer>
+    &copy; 2026 MyTravels &mdash; All rights reserved
+  </footer>
+</div>
+
+<div id="fr">
+  <header>
+    <h1>Politique de confidentialité</h1>
+    <p>MyTravels (application Android et version web) &mdash; dernière mise à jour : 2 octobre 2026</p>
+      <div class="lang-switch">
+        <span class="current">Français</span>
+        <a href="#en">English</a>
+      </div>
+    </header>
+
+  <main>
+
+    <section>
+      <h2>1. Présentation</h2>
+      <p>
+        MyTravels est un service de suivi de voyages édité par un développeur indépendant (ci-après
+        « nous » ou « l'éditeur »). Il est proposé sous deux formes : une <strong>application
+        Android</strong> et une <strong>version web</strong>, accessible dans un navigateur à l'adresse
+        <a href="https://mfodevhub.github.io/MyTravels-web/">mfodevhub.github.io/MyTravels-web</a>.
+        La présente politique de confidentialité décrit quelles données sont collectées, comment elles
+        sont utilisées et quels droits vous disposez à leur égard. Lorsqu'une section ne concerne
+        qu'une seule des deux formes, elle l'indique.
+      </p>
+      <p>Contact : <a href="mailto:mfodevhub@gmail.com">mfodevhub@gmail.com</a></p>
+    </section>
+
+    <section>
+      <h2>2. Données stockées sur votre appareil ou dans votre navigateur</h2>
+      <h3>Application Android</h3>
+      <p>
+        MyTravels enregistre vos données de voyage <strong>exclusivement sur votre appareil</strong>,
+        dans une base de données locale (Room/SQLite). Ces données ne sont jamais transmises à nos
+        serveurs ni à des tiers, à l'exception des envois volontaires décrits à la section 6. Elles
+        comprennent :
+      </p>
+      <ul>
+        <li>Le statut de chaque pays (Visité / À visiter / Non visité)</li>
+        <li>Le statut de chaque ville (Visité / À visiter)</li>
+        <li>Vos préférences d'affichage (thème de carte, icône de l'application, etc.)</li>
+        <li>Les badges et défis débloqués</li>
+      </ul>
+      <h3>Version web</h3>
+      <p>
+        La version web enregistre vos données de voyage <strong>exclusivement dans votre
+        navigateur</strong> (stockage local du navigateur : IndexedDB et localStorage). Elles ne sont
+        jamais transmises à nos serveurs, et ne le sont à un tiers que si vous activez la
+        synchronisation décrite à la section 4. Elles comprennent :
+      </p>
+      <ul>
+        <li>Le statut de chaque pays et de chaque région (Visité / À visiter / Non visité) et, le cas
+            échéant, la date de visite</li>
+        <li>Les villes présentes dans une sauvegarde que vous avez importée</li>
+        <li>Vos préférences (langue, thème) et de petits indicateurs techniques (par exemple l'état de
+            la synchronisation ou le masquage d'un encart d'information)</li>
+      </ul>
+      <p>
+        Pour fonctionner hors ligne, la version web conserve également une copie de ses fichiers dans le
+        cache du navigateur (service worker). Elle ne dépose aucun cookie de suivi.
+      </p>
+      <h3>Sauvegarde par fichier</h3>
+      <p>
+        La fonction <strong>export / import de sauvegarde</strong> (Android et web) vous permet
+        d'exporter ces données sous forme de fichier JSON vers l'emplacement de votre choix (stockage
+        interne, cloud personnel). Ce fichier reste sous votre seul contrôle.
+      </p>
+    </section>
+
+    <section>
+      <h2>3. Publicité — Google AdMob (application Android uniquement)</h2>
+      <p>
+        L'application Android intègre le SDK Google AdMob afin d'afficher des publicités. AdMob peut
+        collecter et utiliser les données suivantes conformément à la
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique de
+        confidentialité de Google</a> :
+      </p>
+      <ul>
+        <li>Identifiant publicitaire Android (AAID)</li>
+        <li>Adresse IP (pour la localisation approximative)</li>
+        <li>Informations sur l'appareil (modèle, version Android, langue)</li>
+        <li>Données d'interaction avec les publicités (clics, impressions)</li>
+      </ul>
+      <p>
+        Conformément au Règlement général sur la protection des données (RGPD), un bandeau de
+        consentement vous est présenté au premier lancement. Vous pouvez modifier votre choix à tout
+        moment depuis les <strong>Paramètres → Publicités</strong> de l'application.
+      </p>
+      <p>
+        Si vous désactivez les publicités depuis les Paramètres, aucune donnée publicitaire n'est
+        collectée et aucune annonce n'est affichée.
+      </p>
+      <p>
+        <strong>La version web ne contient aucune publicité</strong>, aucun outil de mesure d'audience
+        et aucun traceur.
+      </p>
+    </section>
+
+    <section>
+      <h2>4. Synchronisation Google Drive (version web, facultative)</h2>
+      <p>
+        La version web peut, <strong>si vous l'activez</strong>, synchroniser vos données entre vos
+        appareils grâce à votre compte Google. Cette fonction est désactivée par défaut : sans action de
+        votre part, aucune connexion à Google n'est établie.
+      </p>
+      <h3>Ce que fait la synchronisation</h3>
+      <ul>
+        <li>Vous vous connectez avec Google via le service d'authentification Google (Google Identity
+            Services). Le script correspondant n'est chargé depuis les serveurs de Google que lorsque vous
+            vous connectez ou si la synchronisation est déjà activée.</li>
+        <li>L'application demande une <strong>seule autorisation</strong> :
+            <code>https://www.googleapis.com/auth/drive.appdata</code>, c'est-à-dire l'accès à un
+            <strong>dossier privé et masqué réservé à MyTravels</strong> dans votre Google Drive.
+            Elle <strong>ne peut ni voir, ni lire, ni modifier aucun autre fichier</strong> de votre Drive,
+            et n'accède ni à votre nom, ni à votre adresse e-mail, ni à votre profil.</li>
+        <li>Dans ce dossier, elle crée un fichier (<code>mytravels-sync.json</code>) qui contient les
+            mêmes informations que la sauvegarde par fichier : statuts et dates de visite des pays et
+            des régions, et les villes issues d'une sauvegarde importée.</li>
+      </ul>
+      <h3>Ce que nous recevons</h3>
+      <p>
+        <strong>Rien.</strong> Les échanges se font directement entre votre navigateur et Google Drive :
+        nous n'exploitons aucun serveur pour cette fonction et n'avons accès ni à votre compte Google, ni
+        au contenu de votre Drive, ni à vos données de voyage. Ces données restent sous le contrôle de
+        votre compte Google et sont soumises à la
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique de
+        confidentialité de Google</a>.
+      </p>
+      <h3>Jeton d'accès</h3>
+      <p>
+        Après la connexion, Google remet à votre navigateur un jeton d'accès temporaire (valable environ
+        une heure). Il est conservé dans le stockage local de votre navigateur jusqu'à son expiration ou
+        jusqu'à ce que vous vous déconnectiez, puis oublié. Passé ce délai, l'application vous demande de
+        vous reconnecter.
+      </p>
+      <h3>Vos choix</h3>
+      <ul>
+        <li><strong>Se déconnecter</strong> (Réglages → Synchronisation) arrête la synchronisation et oublie
+            le jeton ; vos données restent dans votre navigateur et dans votre Drive.</li>
+        <li><strong>Supprimer ma sauvegarde cloud</strong> supprime le fichier de votre Drive et arrête la
+            synchronisation ; vos données locales sont conservées.</li>
+        <li>Vous pouvez à tout moment retirer l'accès de MyTravels depuis votre compte Google :
+            <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>.
+            Le dossier masqué de l'application peut aussi y être supprimé.</li>
+      </ul>
+      <h3>Conformité aux règles de Google</h3>
+      <p>
+        L'utilisation et le transfert par MyTravels des informations reçues des API Google respectent la
+        <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">politique
+        relative aux données utilisateur des services d'API Google</a>, y compris ses exigences d'usage
+        limité. Ces informations ne servent qu'à fournir la synchronisation décrite ici : elles ne sont
+        ni utilisées pour de la publicité, ni vendues, ni transférées à des tiers, ni lues par des
+        personnes, sauf obligation légale.
+      </p>
+      <p>
+        À ce jour, cette synchronisation concerne la version web ; l'application Android n'utilise pas
+        Google Drive.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Données non collectées</h2>
+      <p>MyTravels <strong>ne collecte pas</strong> :</p>
+      <ul>
+        <li>Votre nom, adresse e-mail ou toute information d'identification personnelle</li>
+        <li>Votre localisation GPS</li>
+        <li>Des photos ou fichiers médias</li>
+        <li>Des données de navigation web</li>
+      </ul>
+      <p>
+        MyTravels ne dispose d'aucun compte utilisateur propre et ne nécessite aucune inscription. La
+        synchronisation facultative de la version web s'appuie sur votre compte Google existant, sans que
+        nous recevions votre identité (section 4).
+      </p>
+      <p>
+        Le formulaire de retour de l'application Android (section 6) comporte un champ de texte libre :
+        nous vous invitons à ne pas y saisir d'informations personnelles.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Rapports de plantage et retours (application Android, envoi volontaire)</h2>
+      <p>
+        Deux fonctions de l'application Android peuvent envoyer des informations à un service de
+        stockage de données que nous exploitons (base de données hébergée par Supabase, sur des serveurs
+        situés dans l'Union européenne), <strong>uniquement
+        lorsque vous en faites la demande explicite</strong> :
+      </p>
+      <ul>
+        <li><strong>Rapport de plantage</strong> : si l'application s'est arrêtée de manière inattendue,
+            elle peut vous proposer, au lancement suivant, d'envoyer un rapport technique. Il contient
+            la trace technique de l'erreur, la version de l'application, la version d'Android, le
+            modèle de l'appareil et la langue du système.</li>
+        <li><strong>Retour utilisateur</strong> : si vous utilisez le formulaire de retour, sont
+            envoyés le message que vous rédigez, ainsi que la version de l'application, la version
+            d'Android, le modèle de l'appareil, la langue, le nombre de pays marqués comme visités et
+            le thème choisi.</li>
+      </ul>
+      <p>
+        Ces envois ne sont jamais automatiques : vous pouvez les refuser ou choisir de ne plus
+        recevoir la proposition. Ils ne contiennent aucune information permettant de vous identifier
+        directement (ni nom, ni adresse e-mail, ni identifiant publicitaire, ni localisation). Ils sont
+        utilisés uniquement pour corriger des défauts de l'application et l'améliorer, et sont
+        transmis exclusivement via HTTPS.
+      </p>
+      <p>
+        <strong>Conservation :</strong> ces données sont conservées 12 mois, puis supprimées. Vous
+        pouvez demander leur suppression avant cette échéance en écrivant à
+        <a href="mailto:mfodevhub@gmail.com">mfodevhub@gmail.com</a>.
+      </p>
+      <p>
+        <strong>Version web :</strong> elle n'envoie aucun rapport ni retour automatiquement. Le lien
+        « Une remarque ou un bug ? » ouvre simplement votre application de messagerie : le message que
+        vous choisissez d'envoyer nous parvient par e-mail, avec les informations que vous y inscrivez.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Achats et dons (application Android)</h2>
+      <p>
+        Les dons et abonnements de soutien sont traités par Google Play. Nous ne recevons ni vos
+        moyens de paiement ni vos données bancaires, seulement la confirmation de l'achat. La version web
+        ne propose aucun achat.
+      </p>
+    </section>
+
+    <section>
+      <h2>8. Autorisations utilisées</h2>
+      <h3>Application Android</h3>
+      <ul>
+        <li><strong>INTERNET</strong> — nécessaire au chargement des publicités AdMob, aux achats et dons via
+            Google Play, et à l'envoi volontaire de rapports ou de retours (section 6)</li>
+        <li><strong>ACCESS_NETWORK_STATE</strong> — permet à AdMob de vérifier la connectivité avant
+            de charger une annonce</li>
+      </ul>
+      <p>Aucune autre permission système n'est demandée.</p>
+      <h3>Version web</h3>
+      <p>
+        La version web ne demande ni géolocalisation, ni accès à l'appareil photo, au microphone ou aux
+        contacts. Elle peut demander au navigateur de rendre son stockage local persistant, afin que vos
+        données ne soient pas effacées automatiquement.
+      </p>
+    </section>
+
+    <section>
+      <h2>9. Sécurité des communications</h2>
+      <p>
+        Toutes les communications réseau de l'application Android (AdMob, consentement RGPD, Google Play,
+        envois volontaires de la section 6) s'effectuent exclusivement via <strong>HTTPS</strong>. Le trafic
+        HTTP non chiffré est explicitement interdit par la configuration de sécurité réseau de
+        l'application. La version web est servie et échange avec Google exclusivement via HTTPS.
+      </p>
+      <p>
+        La version web est hébergée par <strong>GitHub Pages</strong>. Comme tout hébergeur, GitHub peut
+        traiter votre adresse IP et des journaux techniques de connexion lorsque vous consultez le site,
+        selon sa
+        <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">déclaration
+        de confidentialité</a>. Nous n'y ajoutons aucun outil de mesure d'audience.
+      </p>
+    </section>
+
+    <section>
+      <h2>10. Partage des données avec des tiers</h2>
+      <p>
+        Nous ne vendons, ne louons et ne partageons vos données personnelles avec aucun tiers, à
+        l'exception :
+      </p>
+      <ul>
+        <li>des données publicitaires transmises à Google AdMob (section 3, application Android) ;</li>
+        <li>de l'hébergement des envois volontaires décrits à la section 6 (application Android) ;</li>
+        <li>de Google, uniquement si vous activez la synchronisation de la version web, pour stocker votre
+            fichier de sauvegarde dans votre propre Drive (section 4) ;</li>
+        <li>de GitHub, qui héberge le site de la version web (section 9).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>11. Vos droits (RGPD)</h2>
+      <p>
+        Si vous êtes résident de l'Espace économique européen, vous disposez des droits suivants
+        concernant vos données personnelles :
+      </p>
+      <ul>
+        <li>Droit d'accès, de rectification et d'effacement</li>
+        <li>Droit d'opposition au traitement à des fins publicitaires</li>
+        <li>Droit à la portabilité des données</li>
+        <li>Droit de retirer votre consentement à tout moment</li>
+      </ul>
+      <p>
+        Vos données de voyage étant stockées sur votre appareil, dans votre navigateur ou dans votre
+        propre Drive, vous les maîtrisez directement : vous pouvez les exporter (sauvegarde par fichier),
+        les modifier ou les effacer vous-même depuis l'application (Android : <strong>Paramètres →
+        Effacer les données</strong> ; web : <strong>Réglages → Effacer toutes mes données</strong>).
+      </p>
+      <p>
+        Pour exercer vos droits concernant les données traitées par Google (AdMob, compte Google, Drive),
+        rendez-vous sur
+        <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">
+        myaccount.google.com/data-and-privacy</a>.
+        Pour toute demande relative à MyTravels lui-même, y compris l'accès ou la suppression
+        des données envoyées volontairement (section 6), contactez-nous à
+        <a href="mailto:mfodevhub@gmail.com">mfodevhub@gmail.com</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>12. Conservation des données</h2>
+      <ul>
+        <li><strong>Application Android</strong> : les données locales (statuts pays/villes, préférences) sont
+            conservées sur votre appareil jusqu'à ce que vous les effaciez manuellement (via
+            <strong>Paramètres → Effacer les données</strong>) ou que vous désinstalliez l'application.</li>
+        <li><strong>Version web</strong> : les données locales sont conservées dans votre navigateur jusqu'à ce
+            que vous les effaciez (<strong>Réglages → Effacer toutes mes données</strong>) ou que vous vidiez
+            les données du site dans votre navigateur.</li>
+        <li><strong>Synchronisation Google Drive</strong> : le fichier est conservé dans votre Drive jusqu'à ce
+            que vous le supprimiez (<strong>Supprimer ma sauvegarde cloud</strong>, ou depuis votre compte
+            Google). Le jeton d'accès est temporaire (environ une heure).</li>
+        <li><strong>Envois volontaires</strong> (section 6, application Android) : conservés 12 mois.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>13. Enfants</h2>
+      <p>
+        MyTravels n'est pas destiné aux enfants de moins de 13 ans. Nous ne collectons pas
+        sciemment de données personnelles concernant des mineurs.
+      </p>
+    </section>
+
+    <section>
+      <h2>14. Modifications de cette politique</h2>
+      <p>
+        Nous nous réservons le droit de mettre à jour cette politique de confidentialité. En cas de
+        modification substantielle, la date de « dernière mise à jour » en haut de cette page sera
+        actualisée. Nous vous encourageons à consulter cette page périodiquement.
+      </p>
+    </section>
+
+    <section>
+      <h2>15. Contact</h2>
+      <p>
+        Pour toute question relative à cette politique de confidentialité, vous pouvez nous contacter
+        à l'adresse suivante : <a href="mailto:mfodevhub@gmail.com">mfodevhub@gmail.com</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2026 MyTravels &mdash; Tous droits réservés
+  </footer>
+</div>
 
 </body>
 </html>
